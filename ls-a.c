@@ -1,3 +1,6 @@
+/**
+* 实现 ls -a 命令
+**/
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
