@@ -174,6 +174,8 @@ int main(int argc, char const *argv[])
 
 			//执行用户输入命令
 			execvp(cmd[i_fork].argv[0], cmd[i_fork].argv);
+			//exec函数族正确执行没有返回，不会执行以下操作
+			//仅当执行失败，才会返回-1并设置errno，执行以下操作
 			fprintf(stderr, "executing %s error: ", cmd[i_fork].argv[0]);
 			perror("");
 			exit(127);
