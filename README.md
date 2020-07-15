@@ -1,4 +1,6 @@
-# apue-study-code
+## apue-study-code
+
+---
 
 ### 文件操作
 
@@ -23,4 +25,5 @@
 
 ---
 
-* 互斥锁和条件变量解决生产者消费者问题模型：[producer_consumer_mutex_cond.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/producer_consumer_mutex_cond.c)
+* **互斥锁和条件变量**解决生产者-消费者问题模型：[producer_consumer_mutex_cond.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/producer_consumer_mutex_cond.c)
+* **信号量**解决生产者-消费者问题模型：[producer_consumer_sem.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/producer_consumer_sem.c)
