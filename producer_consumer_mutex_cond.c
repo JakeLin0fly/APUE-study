@@ -35,9 +35,7 @@ void *produce(void *arg) {
 	int pthread_no = *(int *)arg;
 	//srand((unsigned)time(NULL));
 	while(thread_flag) {
-		// 先生产资源
-		product = rand();
-		// 获取互斥锁
+		// 先获取互斥锁
 		pthread_mutex_lock(&mutex);
 		//判断临界区是否有空闲区，以供资源存放
 		while(0 == spaces) {
@@ -45,6 +43,8 @@ void *produce(void *arg) {
 			//解除阻塞时重新申请获取互斥锁
 			pthread_cond_wait(&not_full, &mutex);
 		}
+		// 生产资源 应先获取空闲块 再进行生产
+		product = rand() % 1000;
 		//存放资源到临界区
 		buf[in] = product;
 		in = (in + 1) % MAX_BUF_NUM;
