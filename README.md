@@ -14,12 +14,14 @@
 ---
 
 * 管道原理：[pipe.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/pipe.c)
-
 * pause实现sleep(存在时序竞态问题)：[sig_sleep.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/sig_sleep.c)
 * sigsuspend实现sleep(解决时序竞态问题)：[sig_sleep_sigsuspend.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/sig_sleep_sigsuspend.c)
-
 * 管道、多进程实现shell命令解析执行：[simple_shell](https://github.com/JakeLin0fly/apue-study-code/tree/master/simple_shell)
 * mmap存储映射实现多进程文件拷贝：[mult_process_cp](https://github.com/JakeLin0fly/apue-study-code/tree/master/mult_process_cp)
+* 进程同步
+  * 使用**信号量**实现进程间同步
+  * 使用**互斥量mutex**实现进程同步：[process_mutex.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/process_mutex.c)
+  * 使用**文件锁fcntl**实现进程同步：[process_fcntl.c](https://github.com/JakeLin0fly/apue-study-code/blob/master/process_fcntl.c)
 
 ### 线程
 
